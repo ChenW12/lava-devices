@@ -1,0 +1,6 @@
+{% extends 'rock4c-plus.jinja2' %}
+{% set connection_command = 'picocom -b 1500000 /dev/ttyUSB0' %}
+{% set hard_reset_command = '/usr/local/lab-scripts/snmp_pdu_control --hostname pdu19 --command reboot --port 17' %}
+{% set power_off_command = '/usr/local/lab-scripts/snmp_pdu_control --hostname pdu19 --command off --port 17' %}
+{% set power_on_command = '/usr/local/lab-scripts/snmp_pdu_control --hostname pdu19 --command on --port 17' %}
+
