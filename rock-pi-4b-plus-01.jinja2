@@ -2,3 +2,7 @@
 {% set connection_command = 'picocom -q -b 1500000 /dev/ttyUSB0' %}
 {% set shutdown_message = 'reboot: Restarting system' %}
 {% set kernel_start_message = 'Debian GNU/Linux 11 rock-pi-4b-plus' %}
+{% set usbg_ms_commands = {
+    "disable": ["gadget-ms", "off"],
+    "enable": ["gadget-ms", "on", "{IMAGE}"],
+} %}
